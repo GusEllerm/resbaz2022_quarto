@@ -1,8 +1,8 @@
 ---
-title: "Your awesome project title"
+title: "ResBaz tutorial Quarto"
 author:
-  name: "You et al"
-  affiliation: "From whence you hail"
+  name: "Augustus Ellerm"
+  affiliation: "University of Canterbury"
 date: today
 bibliography: refs.bib
 from: markdown+emoji
@@ -13,44 +13,28 @@ format:
 theme:
   light: flatly
   dark: darkly
+toc: true
+toc-depth: 2
+execute:
+  cache: true
 ---
-
-:::{.callout-tip}
-# YAML exercise
-- Fill the `title: ` and `name: ` and `affiliation: ` fieds.
-
-  - a couple of handy entries are already completed
-
-  - the existing field: `date: today` will automatically generate today's date (cool huh?  ͡▀̿ ̿ ͜ʖ ͡▀̿ ̿ )
-
-- Add a table of contents following the [guide](https://quarto.org/docs/output-formats/html-basics.html)
-
-- Remove this callout block and render the document
-
-- Give me a :heavy_check_mark: when done or a :hand: if you need help
-:::
 
 # Introduction
 
-:::{.callout-tip}
-# Markdown exercise
+A quarto document generated during a Resbaz tutorial. 
 
-- Check out [Quarto's markdown guide](https://quarto.org/docs/authoring/markdown-basics.html)
+Wow, A list:
 
-- and the [biostats guide to writing (equations section)](https://biostats-r.github.io/biostats/quarto/04-figures-tables.html#equations)
+- item one
+- item two 
+- item three
+- item four
 
-In the template Introduction section take 3-4 minutes to write:
+A equation:
 
-- a sub-heading under the introduction
+$$\mathrm{CO_3^{2-} + H^+ \rightleftharpoons HCO_3^{2-}}$$
 
-- a list
-
-- and an equation (inline or as a block)
-
-- cite one of the articles in in existing `.bib` file using the `@`
-
-- remove this callout and render the document and hit the :heavy_check_mark: in zoom
-:::
+A citation (@perkel2022).
 
 # Libraries {.unnumbered .unlisted}
 
@@ -78,6 +62,11 @@ If you want to use Python code check out the documentation [here](https://quarto
 
 if (!require("pacman")) install.packages("pacman", repos="http://cran.r-project.org")
 pacman::p_load(ggplot2, palmerpenguins)    # Install & load packages
+```
+
+```{python python.reticulate = FALSE}
+#| code-fold: true
+print("test")
 ```
 
 # Tabsets
